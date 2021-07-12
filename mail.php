@@ -8,9 +8,6 @@
 <body>
     <?php
     $retour = mail('jeremylanoue@jerlandew.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From : $mail');
-    if ($retour) {
-        echo '<p>Votre message a bien été envoyé.</p>';
-    }
     ?>
 </body>
 </html>

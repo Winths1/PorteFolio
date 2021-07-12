@@ -135,7 +135,7 @@ let message = document.getElementById('message');
 form.addEventListener('submit', 
         (e) => {
           
-        e.preventDefault();
+        // e.preventDefault();
         let etat = true ;
 
         if (nom.value.match(/[^a-zA-Zéèçàùê-\s]/g)) {
@@ -156,10 +156,10 @@ form.addEventListener('submit',
             etat = false ;
         }
       
-        nom.value = "";
-        entreprise.value = "";
-        email.value = "";
-        message.value = "";
+        // nom.value = "";
+        // entreprise.value = "";
+        // email.value = "";
+        // message.value = "";
 
       alert('Le message a bien été envoyé!');  
 
