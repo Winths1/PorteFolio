@@ -15,7 +15,7 @@
     <!-- Header -->
     <header>
         <ul class="ul-header">
-            <li id="li1"><a href="#Apropos" id="toApropos">À Propos</a></li>
+            <li id="li1"><a href="#Apropos" id="toApropos" class="light">À Propos</a></li>
             <li id="li2"><a href="#Projets" id="toProjets">Mes Projets</a></li>
             <li id="li3"><a href="#Contact" id="toContact">Me Contacter</a></li>
         </ul>
@@ -29,7 +29,7 @@
                 <h1>À Propos</h1><br>
                 <h3>Je m'appelle Jérémy LANOUE</h3><br>
                 <p>Actuellement en formation
-                    Développeur Web & Web Mobile
+                    Développeur Web & Web Mobile <br>
                     Je recherche un stage pour valider celle-ci
                     du 27/09 au 03/12</p>
                 <a href="./pdf/CV_JeremyLANOUE_dev.pdf" class="link-cv">Télécharger mon C.V.</a>
@@ -40,16 +40,16 @@
             <div class="cont">
                 <h1>Voici les projets réalisés à ce jour</h1>
                 <div>
-                    <button class="btn1 anim-btn">Animations CSS</button>
+                    <div class="btn1 anim-btn"><p>Animations CSS</p></div>
                 </div>
                 <div>
-                    <button class="btn2 anim-btn">Bootstrap</button>
+                    <div class="btn2 anim-btn"><p>Bootstrap</p></div>
                 </div>
                 <div>
-                    <button class="btn3 anim-btn">API Javascript</button>
+                    <div class="btn3 anim-btn"><p>API Javascript</p></div>
                 </div>
                 <div>    
-                    <button class="btn4 anim-btn">HTML CSS</button>
+                    <div class="btn4 anim-btn"><p>HTML CSS</p></div>
                 </div>
             </div>
         </section>
@@ -60,7 +60,7 @@
                     <img src="./images/animationCSS.png" alt="animationCSS"> 
                 </div>
                 <div class="btn-img">
-                    <button class="btn-projets anim-btn">Retour</button>
+                    <div class="btn-projets anim-btn"><p>Retour</p> </div>
                 </div>
             </div>
         </section>
@@ -71,7 +71,7 @@
                     <img src="./images/groupeMusique.png" alt="responsive bootstrap">
                 </div>
                 <div class="btn-img">
-                    <button class="btn-projets anim-btn">Retour</button>
+                    <div class="btn-projets anim-btn"><p>Retour</p> </div>
                 </div>
             </div>
         </section>
@@ -82,7 +82,7 @@
                     <img src="./images/projetJSAPI.png" alt="JS API">
                 </div>
                 <div class="btn-img">
-                    <button class="btn-projets anim-btn">Retour</button>
+                    <div class="btn-projets anim-btn"><p>Retour</p> </div>
                 </div>
             </div>
         </section>
@@ -93,31 +93,33 @@
                         <img src="./images/siteFraise.png" alt="responsive">
                 </div>
                 <div class="btn-img">
-                    <button class="btn-projets anim-btn">Retour</button>
+                    <div class="btn-projets anim-btn"><p>Retour</p> </div>
                 </div>
             </div>
         </section>
         <!-- Section me contacter -->
         <section class="sec7" id="Contact">
             <div class="">
-                <form>
+                
+                <form id="formulaire" action="./mail.php" method="post">
                     <div class="cont flex-sec">
 
                         <h1>Contact</h1>
 
                         <div class="flex-sec">
-                            <label for="name">Nom Complet</label>
-                            <input type="text" name="name" id="name">
+                            <label for="nom">Nom Complet</label>
+                            <input type="text" name="nom" id="nom" require>
                         </div>
 
                         <div class="flex-sec">
                             <label for="email">Adresse Mail</label>
-                            <input type="mail" name="email" id="email">
+                            <input type="email" name="email" id="email" require
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         </div>
 
                         <div class="flex-sec">
                             <label for="entreprise">Entreprise</label>
-                            <input type="text" name="entreprise" id="entreprise">
+                            <input type="text" name="entreprise" id="entreprise" maxlength="20" require >
                         </div>
 
                         <div class="flex-sec">
@@ -125,8 +127,8 @@
                             <textarea name="message" id="message" cols="30" rows="10"></textarea>
                         </div>
 
-                        <div class="flex-sec">
-                            <button type="submit" >Valider</button>
+                        <div class="subm-btn">
+                            <button class="btn" type="submit" >Valider</button>
                         </div>
 
                     </div>
@@ -151,6 +153,9 @@
         </ul>
     </footer>
     
+    <!-- JAVASCRIPT -->
     <script src="./script/script.js"></script>
+
+
 </body>
 </html>

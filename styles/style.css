@@ -2,47 +2,98 @@
 
 
 /* STYLE FONT */
-a {
-    text-decoration: none;
-}
-
 .ul-header li {
     list-style: none;
-    background-color: white;
-    transition: all 0.3s ease-in-out;
+    background-color: black;
 }
 .ul-header li a{
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: #cfcfcf;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
-.light{
-    box-shadow: 0 0 5px 5px white;
-    transform: scale(1.2);
+.ul-header li a.light{
+    color: white;
+    transform: scale(1.1);
 }
 
 .ul-header li{
     border: 2px solid black;
-    padding: 1%;
+    padding:0 1%;
     border-radius: 15px;
 }
 
 
 /* BOUTTONS */
 /* ******** */
-
-button{
-    padding: 1%;
+.btn {
     text-align: center;
-    margin: 2% auto;
-    background-color: black;
-    color: white;
-    border-radius: 15%;
+    margin: 3% auto;
+    color: #000;
+    border-radius: 50px;
+    background: #E4E3EA;
+    box-shadow:  20px 20px 60px #c2c1c7,
+                 -20px -20px 60px #ffffff;
+    border: 1px solid #f0f0f0;
     transition: all .3s ease-in-out;
-    width: 26vw;
+    width: 30vw;
     height: 7vh;
     text-align: center;
+    cursor: pointer;
 }
+
+.anim-btn{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    margin: 3% auto;
+    color: #000;
+    border-radius: 50px;
+    background: #E4E3EA;
+    box-shadow:  20px 20px 60px #c2c1c7,
+                 -20px -20px 60px #ffffff;
+    border: 1px solid #f0f0f0;
+    transition: all .3s ease-in-out;
+    width: 30vw;
+    height: 7vh;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* .subm-btn{
+    margin: 5% auto;
+    width: 30vw;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #E4E3EA;
+    box-shadow: -10px -10px 30px 0 #fff,
+                10px 10px 30px 0 RGBA(194, 193, 199, 0.4);
+    box-shadow: inset -10px -10px 10px 0 RGBA(194, 193, 199, 0.25),
+                inset 10px 10px 10px 0 #fff;
+
+} */
+
+/* button{
+    text-align: center;
+    margin: 2% auto;
+    color: #000;
+    border-radius: 50px;
+    background: #e4e3ea;
+    box-shadow:  20px 20px 17px #dddce3,
+                 -20px -20px 17px #ebeaf1;
+    transition: all .3s ease-in-out;
+    width: 30vw;
+    height: 7vh;
+    text-align: center;
+} */
 .btn-img {
     margin: 0 auto;
 }
@@ -52,20 +103,23 @@ button{
 header, footer {
     padding: 0;
     width: 100%;
-    height: 10vh;
+    height: 7vh;
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url(../images/1858127.jpg);
+    background: #000;
 }
 
 /* HEADER */
 /* ****** */
-
-header {
+header{
+    /* border-bottom: 2px solid black; */
+    box-shadow: 0 1px 5px 0 black;
     top: 0;
+    z-index: 1000;
 }
+
 
 /* UL */
 
@@ -82,25 +136,25 @@ header {
 /* Images */
 
 section img{
+    z-index: 100;
+    transform: translateZ(5px);
     margin: 2% auto;
     display: block;
     max-width: 80%;
-    border: 5px solid black;
+    border: 2px solid black;
     border-radius: 10px;
-    box-shadow: 0 0 10px 10px Black;
+    box-shadow: 0 0 5px 1px Black;
 }
 
 /* SECTIONS */
 /* ******** */
 
 section {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    background-image: url(../images/texture-monotone-gray-concrete-background-wallpaper-concept.jpg);
+    background: #E4E3EA;
     position: absolute;
     width: 100%;
-    height: 80vh;
-    top: 10vh;
+    height: 86vh;
+    top: 7vh;
     z-index: 50;
 }
 .flex-sec{
@@ -119,17 +173,18 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 60%;
+    width: 70%;
     height: 65%;
     margin: 0 auto;
-    background-color: rgba(211, 211, 211, 0.39);
     border-radius: 25px;
 }
 
 .pres a {
     padding: 2%;
 }
-
+.pres>p{
+    padding: 0 5%;
+}
 .sec1{
     text-align: center;
     display: flex;
@@ -137,6 +192,7 @@ section {
     justify-content: center;
 }
 .sec1.active {
+    
     transform: translateX(-2500px);
 }
 
@@ -149,47 +205,59 @@ section {
     justify-content: center;
     transform: translateX(-2500px);
 }
+.sec2 .cont h1{
+    margin: 5vh auto;
+}
 .sec2.active {
+    
     transform: translateX(0);
 }
 .sec2 .cont{
-    width: 65%;
+    width: 70%;
     height: 80%;
 }
 
 /* Section3 */
 
 .sec3 {
+    
     transform: translateX(-2500px);
 }
 .sec3.active {
+    
     transform: translateX(0);
 }
 
 /* Section4 */
 
 .sec4 {
+    
     transform: translateX(-2500px);
 }
 .sec4.active {
+    
     transform: translateX(0);
 }
 
 /* Section5 */
 
 .sec5 {
+    
     transform: translateX(-2500px);
 }
 .sec5.active {
+    
     transform: translateX(0);
 }
 
 /* Section6 */
 
 .sec6 {
+    
     transform: translateX(-2500px);
 }
 .sec6.active {
+    
     transform: translateX(0);
 }
 
@@ -199,7 +267,16 @@ form{
     margin: 0 auto;
     text-align: center;
 }
+form input, form textarea{
+    padding: 1%;
+    border-radius: 10px;
+}
+form input{
+    text-align: left;
+    padding: 1%;
+}
 .sec7 {
+    
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -211,10 +288,10 @@ form{
     padding: 2%;
     height: 100%;
     margin: 0 auto;
-    background-color: rgba(211, 211, 211, 0.39);
     border-radius: 25px;
 }
 .sec7.active {
+    
     transform: translateX(0);
 }
 
@@ -222,15 +299,22 @@ form{
 /* ****** */
 
 footer {
-    border-top: 2px solid black;
+    /* border-top: 2px solid black; */
+    box-shadow: 0 0 5px 1px black;
     bottom: 0;
+    z-index: 1000;
 }
 
 .ul-footer li a img{
-    width: 200%;
+    margin: 0.5px auto;
+    width: 100%;
     border-radius: 50%;
+    background-color: #cfcfcfcf;
+    box-shadow: 0 0 5px 1px white;
+}
+.ul-footer li a img:hover{
     background-color: white;
-    box-shadow: 0 0 5px 5px white;
+    transform: scale(1.1);
 }
 .ul-footer li{
     list-style: none;
@@ -268,14 +352,14 @@ footer {
 
 /* ANIMATIONS */
 /* ********** */
-.ul-header li:hover{
-    box-shadow: 0 0 5px 5px white;
+.ul-header li:hover a{
+    color: white;
 }
 
-.anim-btn:hover{
-    color: black;
-    background-color: white;
-    border: 2px solid black;
-    box-shadow: 0 0 5px 5px black;
+.anim-btn:hover, .btn:hover{
+    border-radius: 50px;
+    background: #E4E3EA;
+    box-shadow: inset 20px 20px 60px #c2c1c7,
+                inset -20px -20px 60px #ffffff;
 }
 
